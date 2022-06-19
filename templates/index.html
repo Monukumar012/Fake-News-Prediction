@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fake News Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid text-white">
+      <a class="navbar-brand text-white" href="/">FAKE NEWS PREDICTION</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="nav navbar-nav navbar-right" id="navbarNavAltMarkup">
+        <!-- <div class="navbar-nav">
+          <a class="nav-link text-white" target="_blank"
+            href="https://rapidapi.com/fangyiyu/api/fake-news-detection1/">API</a>
+          <a class="nav-link text-white" target="_blank"
+            href="https://medium.com/@fangyiyu/how-to-build-a-fake-news-detection-web-app-using-flask-c0cfd1d9c2d4?sk=2a752b0d87c759672664232b33543667/">Blog</a>
+          <a class="nav-link text-white" target="_blank"
+            href="https://github.com/fangyiyu/Fake_News_Detection_Flask/blob/main/Fake_news_detection.ipynb">NoteBook</a>
+          <a class="nav-link text-white" target="_blank"
+            href="https://github.com/fangyiyu/Fake_News_Detection_Flask">Code Source</a>
+        </div> -->
+      </div>
+    </div>
+  </nav>
+  <br>
+  <!-- <p style=text-align:center>Enter your text to try it.</p> -->
+  <br>
+  <div class='container'>
+    <form action="/" method="POST">
+      <div class="col-three-forth text-center col-md-offset-2">
+        <div class="form-group">
+          <textarea class="form-control mt-3 shadow-sm p-3 mb-5 bg-white rounded" rows="5" name="text"
+            placeholder="Write your text here..." required>{{text}}</textarea>
+          <br><br>
+          <button class="btn btn-primary btn-outline btn-md" type="submit" name="predict">Predict</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br>
+  {% if result %}
+  <p style="text-align:center"><strong>Prediction : {{result}}</strong></p>
+  {% endif %}
+
+  <footer class="bg-dark text-center text-white fixed-bottom">
+    <div class="container p-4 pb-0">
+      <section class="mb-4">
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/im.monukumar" role="button"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/monu-kumar-81b38b213/" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Monukumar012" role="button"><i class="fab fa-github"></i></a>
+      </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="">mitmeerut.ac.in</a>
+    </div>
+  </footer>
+</body>
+
+</html>
